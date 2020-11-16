@@ -1,0 +1,6 @@
+library(arrow)
+Sys.sleep(2)
+df <- arrow::read_parquet("/workdir/data-arrow2.parquet")
+print(paste0("read parquet using arrow ", packageVersion("arrow")))
+print(dim(df))
+dput(df)
